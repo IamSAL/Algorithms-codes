@@ -2,7 +2,7 @@
 int main(){
 
 int n,i,j,temp,temp2;
-
+//Taking input
 printf("\nHow Many Activities?:");
 scanf("%d",&n);
 
@@ -16,7 +16,7 @@ for(i=1;i<=n;i++){
     printf("\nEnd of Activity[%d]:",i);
     scanf("%d",&end[i]);
 }
-
+//Sorting start and end time in ascending order.
 for(i=1;i<=n;i++){
     for(j=1;j<=n;j++){
         if(end[i]>end[i+1]){
@@ -33,7 +33,7 @@ for(i=1;i<=n;i++){
 }
 
 printf("\n Activity 1 is selected by default.");
-
+//main job/output
 for(i=2;i<=n;i++){
     if(start[i]>=end[i-1]){
         printf("\n Activity %d is selected.",i);
